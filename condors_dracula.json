@@ -20,7 +20,7 @@
             "style": "folder"
           },
           "style": "powerline",
-          "template": " {{ .Path }} ",
+          "template": "<p:white> {{ .Path }} ",
           "type": "path"
         },
         {
@@ -34,7 +34,7 @@
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) ",
+          "template": "<p:white> \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) ",
           "type": "git"
         },
         {
@@ -42,7 +42,7 @@
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "<p:white> \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
@@ -52,7 +52,7 @@
             "time_format": "2023-08-08 15:04"
           },
           "style": "diamond",
-          "template": "<p:white> </> {{ .CurrentDate | date .Format }} ",
+          "template": "<p:white> {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b0",
           "type": "time"
         }
