@@ -54,7 +54,7 @@
           "style": "diamond",
           "template": " {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b0",
-          "type": "time"
+          "type": "datetime"
         }
       ],
       "type": "prompt"
