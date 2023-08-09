@@ -42,7 +42,7 @@
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": "<p:white> </> \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "<p:white>  \ue718 </> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
@@ -68,7 +68,7 @@
           "invert_powerline": true,
           "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "template": "<p:white> </> \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "template": "<p:white>  \ue7ad </> {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
           "trailing_diamond": "\ue0b4",
           "type": "aws"
         }
