@@ -73,7 +73,7 @@
           "type": "aws"
         }
       ],
-      "type": "rprompt"
+      "type": "prompt"
     }
   ],
   "final_space": true,

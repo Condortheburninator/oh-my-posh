@@ -20,7 +20,7 @@ blocks:
     type: path
   - background: "#ffb86c"
     foreground: "#ffffff"
-    powerline_symbol: ""
+    powerline_symbol: c
     properties:
       branch_icon: ''
       fetch_stash_count: true
