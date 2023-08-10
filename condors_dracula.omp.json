@@ -9,7 +9,7 @@
           "foreground": "#f8f8f2",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "<p:white> </> {{ .UserName }} ",
+          "template": " {{ .UserName }} ",
           "type": "session"
         },
         {
@@ -20,7 +20,7 @@
             "style": "folder"
           },
           "style": "powerline",
-          "template": "<p:white> </> {{ .Path }} ",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
@@ -49,10 +49,10 @@
           "background": "#ff79c6",
           "foreground": "#f8f8f2",
           "properties": {
-            "time_format": "15:43"
+            "time_format": "2006-01-02 15:04"
           },
           "style": "diamond",
-          "template": "<p:white> {{ .CurrentDate | date .Format }}  </> ",
+          "template": " {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b0",
           "type": "time"
         }

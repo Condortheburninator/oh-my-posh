@@ -1,0 +1,37 @@
+
+
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+final_space: true
+version: 2
+blocks:
+    alignment: left
+    segments:
+      - type: path
+        style: diamond
+        trailing_diamond: "\ue0b0"
+        leading_diamond:  "\ue0b6"
+        powerline_symbol: "\ue0b0"
+        background: "#bd93f9"
+        foreground: "#ffffff"
+        properties:
+          style: folder
+          # template: " {{ .Path }} "
+      - type: time
+        style: diamond
+        trailing_diamond : "\ue0b0"
+        background: "#ff79c6"
+        foreground: "#ffffff"
+        properties:
+          style: diamond
+          template: " {{ .CurrentDate | date .Format }} "
+          time_format: "2006-01-02 15:04"
+    - type: text
+
+
+    # segments":
+    #   - type: prompt
+    #     new_line: true
+    #     foreground: "#f1184c"
+    #     style: "plain"
+    #     template: "\u279c "
