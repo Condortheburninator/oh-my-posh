@@ -138,7 +138,7 @@
           "background": "#6272a4",
           "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": " \ue641 {{ .CurrentDate | date .Format }} ",
+          "template": " \ue641 {{ .CurrentDate | date .Format }} MT | {{ dateInZone .Format .CurrentDate \"America/Chicago\" }} CT ",
           "properties": {
             // "time_format": "2006-01-02 15:04"
             "time_format": "15:04"
