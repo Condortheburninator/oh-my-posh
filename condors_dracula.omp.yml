@@ -7,6 +7,24 @@ version: 2
 
 blocks:
   - segments:
+
+    - type: git
+      style: powerline
+      background: "#6272a4"
+      # background_templates:
+      #   - "{{ if or (.Working.Changed) (.Staging.Changed) }}#f36943{{ end }}"
+      #   - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#a8216b{{ end }}"
+      #   - "{{ if gt .Ahead 0 }}#35b5ff{{ end }}"
+      #   - "{{ if gt .Behind 0 }}#f89cfa{{ end }}"
+      foreground: "#193549"
+      foreground_templates:
+        - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ffffff{{ end }}"
+      powerline_symbol: 
+      template: " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }} "
+      properties:
+        branch_max_length: 25
+        fetch_status: true
+
     - type: time
       foreground: "#7FD5EA"
       template: "\ue641 {{ .CurrentDate | date .Format }} MT | {{ dateInZone .Format .CurrentDate \"America/Chicago\" }} CT "
@@ -28,22 +46,7 @@ blocks:
         properties:
           style: folder
 
-      - type: git
-        style: powerline
-        background: "#6272a4"
-        # background_templates:
-        #   - "{{ if or (.Working.Changed) (.Staging.Changed) }}#f36943{{ end }}"
-        #   - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#a8216b{{ end }}"
-        #   - "{{ if gt .Ahead 0 }}#35b5ff{{ end }}"
-        #   - "{{ if gt .Behind 0 }}#f89cfa{{ end }}"
-        foreground: "#193549"
-        foreground_templates:
-          - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ffffff{{ end }}"
-        powerline_symbol: 
-        template: " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }} "
-        properties:
-          branch_max_length: 25
-          fetch_status: true
+
 
       - background: "#00897b"
         background_templates:
