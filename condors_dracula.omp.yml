@@ -16,7 +16,7 @@ blocks:
       #   - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#a8216b{{ end }}"
       #   - "{{ if gt .Ahead 0 }}#35b5ff{{ end }}"
       #   - "{{ if gt .Behind 0 }}#f89cfa{{ end }}"
-      foreground: "#193549"
+      foreground: "#FFFFFF"
       foreground_templates:
         - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ffffff{{ end }}"
       powerline_symbol: 
@@ -26,11 +26,18 @@ blocks:
         fetch_status: true
 
     - type: time
-      foreground: "#7FD5EA"
+      # style: powerline
+      style: diamond
+      # powerline_symbol: 
+      # leading_diamond: 
+      trailing_diamond: 
+      foreground: "#FFFFFF"
+      background: "#6272a4"
+      # background: "#FFFFFF"
       template: "\ue641 {{ .CurrentDate | date .Format }} MT | {{ dateInZone .Format .CurrentDate \"America/Chicago\" }} CT "
       properties:
         time_format: 15:04
-      style: plain
+
     type: prompt
     alignment: right
 
@@ -46,16 +53,14 @@ blocks:
         properties:
           style: folder
 
+      - type: text
+        style: powerline
+        powerline_symbol: "\ue0b0"
+        foreground: "#E64747"
+        background: "#6272a4"
+        leading_diamond: "\ue0b4"
+        trailing_diamond: "\ue0b4"
+      # "template": "❯"
+        template: "<#C591E8>\u276f</><#69FF94>\u276f</>"
 
-
-      - background: "#00897b"
-        background_templates:
-          - "{{ if gt .Code 0 }}#e91e63{{ end }}"
-        foreground: "#ffffff"
-        template: "<parentBackground></>  "
-        properties:
-          always_enabled: true
-        style: diamond
-        trailing_diamond: 
-        type: status
     type: prompt
