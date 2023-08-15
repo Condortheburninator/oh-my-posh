@@ -18,7 +18,7 @@ blocks:
       trailing_diamond: 
       template: " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} "
       properties:
-        branch_max_length: 25
+        branch_max_length: 35
         fetch_stash_count: true
         fetch_status": true
         fetch_upstream_icon": true
@@ -45,16 +45,7 @@ blocks:
       properties:
         time_format: 2006-01-02
 
-    - type: time
-      style: diamond
-      leading_diamond: "<transparent,background>\ue0b0</>"
-      trailing_diamond: 
-      background: "#6272a4"
-      foreground: "#f8f8f2"
-      # template: " \ue641 {{ .CurrentDate | date .Format }} 󰶵"
-      template: " {{ .CurrentDate | date .Format }} 󰶵 "
-      properties:
-        time_format: 15:04
+
 
     # - type: time
     #   style: diamond
@@ -83,6 +74,17 @@ blocks:
       template: "\ue5fe {{ .Path }} "
       properties:
         style: folder
+
+    # - type: time
+    #   style: diamond
+    #   leading_diamond: "<transparent,background>\ue0b0</>"
+    #   trailing_diamond: 
+    #   background: "#6272a4"
+    #   foreground: "#f8f8f2"
+    #   # template: " \ue641 {{ .CurrentDate | date .Format }} 󰶵"
+    #   template: " {{ .CurrentDate | date .Format }} 󰶵 "
+    #   properties:
+    #     time_format: 15:04
 
     - type: text
       style: powerline
